@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form File Upload</title>
+</head>
+<body>
+  <form action="/FormInput" method="POST" enctype="multipart/form-data">
+    <div class="formGroup">
+      <input type="file" name="Photo" id="Photo">
+      <input type="submit" placeholder="Submit">
+    </div>
+  </form>
+  <% uploadedFiles.forEach(Photo => { %>
+    <img src="/uploads/<%= Photo %>" alt="Uploaded Image">
+  <% }); %>
+</body>
+</html>
